@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block beforeMain %}
+  <div class="block hero">
+    <div class="inner">
+      <div class="hero-text">
+        <h4>Welcome to my first Apostrophe site!</h4>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block main %}
+
+{# ===== Singleton apos component ===== #}
+<div class="main-content">
+  {{
+    apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+      toolbar: ['Styles', 'Bold', 'Italic'],
+      styles: [
+        { name: 'Title', element: 'h3' },
+        { name: 'Meta', element: 'h5' }
+      ]
+    })
+  }}
+</div>
+
+<div class="main-content">
+  {{
+    apos.singleton(data.page, 'heroPic', 'apostrophe-images', {
+      minSize: [ 700, 350 ],
+      aspectRatio: [ 2, 1 ],
+      limit: 1,
+      size: 'full'
+    })
+  }}
+</div>
+
+<div class="main-content">
+  {{
+    apos.singleton(data.page, 'resume', 'apostrophe-files', {
+      limit: 1
+    })
+  }}
+</div>
+
+<div class="main-content">
+  {{
+    apos.singleton(data.page, 'logo', 'apostrophe-images', {
+      limit: 1,
+      minSize: [ 1200, 600 ],
+      addLabel: 'Set the logo',
+      editLabel: 'Change the logo',
+      controls: {
+        movable: false,
+        removable: false,
+        position: 'bottom-right'
+      }
+    })
+  }}
+</div>
+
+{# ===== Area apos component ===== #}
+<div class="main-content">
+  {{
+    apos.area(data.page, 'body', {
+      widgets: {
+        'apostrophe-rich-text': { toolbar: [ 'Bold', 'Italic' ] },
+        'apostrophe-images': { size: 'full' }
+      }
+    })
+  }}
+</div>
+
+
+{% endblock %}
