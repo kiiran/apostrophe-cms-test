@@ -26,29 +26,15 @@
     like headers or navigation.
   #}
   <nav>
-    <ul class="tabs">
-      <li><a href="{{ data.home._url }}">{{ data.home.title }}</a></li>
-
-      {% for tab in data.home._children %}
-        <li class="
-        {% if data.page and
-          (apos.pages.isAncestorOf(tab, data.page) or
-          tab._id == data.page._id)
-        %}
-          current
-        {% endif %}
-        "><a href="{{ tab._url }}">{{ tab.title }}</a>
-        
-        {% if tab._children.length %}
-          <ul>
-            {% for child in tab._children %}
-              <li><a href="{{ child._url }}">{{ child.title }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    {{
+      apos.area(data.global, 'navigation', {
+        widgets: {
+          link: {},
+          'page-link': {}
+        },
+        controls: { position: 'bottom-right' }
+      })
+    }}
   </nav>
 {% endblock %}
 

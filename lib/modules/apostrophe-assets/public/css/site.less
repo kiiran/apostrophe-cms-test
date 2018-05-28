@@ -11,27 +11,22 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  padding: 20px 20px;
   background-color: #222222;
 
-  .tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  a {
+    font-weight: bold;
+    padding: 10px 0 10px 20px;
+  }
+}
 
-    li {
-      padding-left: 20px;
-    }
+a {
+  color: @apos-white;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
 
-    a {
-      color: @apos-white;
-      text-decoration: none !important;
-      transition: all 0.2s ease;
-
-      &:hover {
-        color: @apos-primary;
-      }
-    }
+  &:hover {
+    color: @apos-primary;
   }
 }
 
@@ -76,4 +71,17 @@ strong {
 }
 em {
   font-style: italic;
+}
+
+.horizontal-area {
+  .apos-area-widgets, // proper context for logged-in user
+  .apos-area {
+    // proper context for logged-out user
+    display: flex;
+  }
+
+  .apos-area-widget-wrapper {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
 }

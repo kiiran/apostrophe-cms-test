@@ -33,5 +33,6 @@ var apos = require('apostrophe')({
     },
 
     'link-widgets': {},
+    'page-link-widgets': {},
   },
 });
