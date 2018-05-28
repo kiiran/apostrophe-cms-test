@@ -1,7 +1,49 @@
-@import "utils/reset.less";
+@import 'utils/reset.less';
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
-body { background-color: @apos-light; }
+body {
+  background-color: @apos-light;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #222222;
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      padding-left: 20px;
+    }
+
+    a {
+      color: @apos-white;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: @apos-primary;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222222;
+  color: white;
+  font-size: 85%;
+  padding: 20px;
+}
 
 .main-content {
   font-family: 'Karla', sans-serif;
@@ -27,7 +69,11 @@ body { background-color: @apos-light; }
     font-size: 20px;
     margin-bottom: 10px;
   }
+}
 
-  strong { font-weight: bold; }
-  em { font-style: italic; }
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
 }
