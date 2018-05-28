@@ -30,6 +30,24 @@ a {
   }
 }
 
+.two-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  > div {
+    flex: 1;
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}
+
 footer {
   display: flex;
   justify-content: space-around;
@@ -44,7 +62,8 @@ footer {
   font-family: 'Karla', sans-serif;
   margin: 30px auto;
   padding: 20px;
-  max-width: 500px;
+  width: 85vw;
+  max-width: 800px;
   color: @apos-white;
   background-color: @apos-primary;
   .apos-drop-shadow;
@@ -84,4 +103,12 @@ em {
     flex-grow: 1;
     flex-basis: 0;
   }
+}
+
+h1 {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+  color: @apos-primary;
+  margin: 40px 0 30px 0;
 }

@@ -3,6 +3,7 @@
 {% block main %}
 
 {# ===== Singleton apos component ===== #}
+<h1>Singletons</h1>
 <div class="main-content">
   {{
     apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
@@ -18,9 +19,10 @@
 <div class="main-content">
   {{
     apos.singleton(data.page, 'heroPic', 'apostrophe-images', {
-      minSize: [ 700, 350 ],
       aspectRatio: [ 2, 1 ],
       limit: 1,
+      minSize: [ 700, 350 ],
+      noHeight: true,
       size: 'full'
     })
   }}
@@ -50,8 +52,17 @@
   }}
 </div>
 
+
+<div class="main-content">
+  {{
+    apos.singleton(data.page, 'twoColumn', 'two-column')
+  }}
+</div>
+
 <hr>
+
 {# ===== Area apos component ===== #}
+<h1>Areas</h1>
 <div class="main-content">
   {{
     apos.area(data.page, 'body', {
@@ -72,6 +83,5 @@
     })
   }}
 </div>
-
 
 {% endblock %}

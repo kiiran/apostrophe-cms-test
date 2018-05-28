@@ -35,5 +35,6 @@ var apos = require('apostrophe')({
     'link-widgets': {},
     'page-link-widgets': {},
     'drawer-widgets': {},
+    'two-column-widgets': {},
   },
 });
