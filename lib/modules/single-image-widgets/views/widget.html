@@ -1,0 +1,7 @@
+{% extends 'widgetBase.html' %}
+
+{%- block title -%}
+  {% if data.widget.showTitle %}
+    <h4>{{ image.title }}</h4>
+  {% endif %}
+{%- endblock -%}
