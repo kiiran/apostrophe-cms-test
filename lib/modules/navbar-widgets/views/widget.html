@@ -1,0 +1,10 @@
+<ul>
+  <script>console.log('data', '{{ data.global.mainNav | dump }}')</script>
+  {% for link in data.global.mainNav.items[0].links.items %}
+    {% if link.type == 'page-link' %}
+      <li><a href="{{ link._page.slug }}">{{ link._page.title }}</a></li>
+    {% else %}
+      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

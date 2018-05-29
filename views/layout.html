@@ -27,12 +27,12 @@
   #}
   <nav>
     {{
-      apos.area(data.global, 'navigation', {
-        widgets: {
-          link: {},
-          'page-link': {}
-        },
-        controls: { position: 'bottom-right' }
+      apos.singleton(data.global, 'mainNav', 'navbar', {
+        controls: {
+          movable: false,
+          removable: false,
+          position: 'top-right'
+        }
       })
     }}
   </nav>

@@ -1,27 +1,16 @@
 @import 'utils/reset.less';
+@import 'components/footer.less';
+@import 'components/nav.less';
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
 body {
   background-color: @apos-light;
   font-family: 'Karla', sans-serif;
   font-size: 16px;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px 20px;
-  background-color: #222222;
-
-  a {
-    font-weight: bold;
-    padding: 10px 0 10px 20px;
-  }
+  overflow-x: hidden;
 }
 
 a {
-  color: @apos-white;
   text-decoration: none !important;
   transition: all 0.2s ease;
 
@@ -46,16 +35,6 @@ a {
       margin-left: 5px;
     }
   }
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #222222;
-  color: white;
-  font-size: 85%;
-  padding: 20px;
 }
 
 .main-content {
