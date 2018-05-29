@@ -6,23 +6,21 @@
   <h1>Singletons</h1>
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
-      toolbar: ['Styles', 'Bold', 'Italic'],
-      styles: [
-        { name: 'Title', element: 'h3' },
-        { name: 'Meta', element: 'h5' }
-      ]
-    })
-  }}
+      apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+        toolbar: ['Styles', 'Bold', 'Italic'],
+        styles: [
+          { name: 'Title', element: 'h3' },
+          { name: 'Meta', element: 'h5' }
+        ]
+      })
+    }}
   </div>
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'mainImage', 'single-image', {
+    apos.singleton(data.page, 'newMainImage', 'single-image', {
       aspectRatio: [ 2, 1 ],
-      limit: 1,
       minSize: [ 700, 350 ],
-      noHeight: true,
       size: 'full'
     })
   }}

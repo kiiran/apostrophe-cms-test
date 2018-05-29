@@ -33,6 +33,8 @@ var apos = require('apostrophe')({
     },
 
     'link-widgets': {},
+    'hero-widgets': {},
+    'page-button-widgets': {},
     'page-link-widgets': {},
     'navbar-widgets': {},
     'drawer-widgets': {},

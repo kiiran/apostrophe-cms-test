@@ -1,5 +1,7 @@
 @import 'utils/reset.less';
+@import 'utils/apostrophe-override.less';
 @import 'components/footer.less';
+@import 'components/hero.less';
 @import 'components/nav.less';
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
@@ -24,6 +26,22 @@ a {
 
   &:hover {
     color: @apos-primary;
+  }
+}
+
+a.button {
+  border: 2px solid white;
+  border-radius: 35px;
+  color: white;
+  font-size: 130%;
+  font-weight: bold;
+  margin: 5px 10px;
+  padding: 15px 35px;
+  text-decoration: none !important;
+
+  &:first-child,
+  &:hover {
+    background-color: @apos-primary;
   }
 }
 
@@ -59,17 +77,16 @@ a {
     float: right;
     color: @apos-white;
   }
+}
 
-  // Basic rich-text editor styles:
-  h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
+h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
 
-  h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 strong {

@@ -6,12 +6,15 @@
 {% extends "layout.html" %}
 
 {% block main %}
+  {{ apos.singleton(data.page, 'heroDiv', 'hero', {
+    controls: {
+      movable: false,
+      position: 'top-right'
+    }
+  }) }}
+
   <div class="main-content">
-    <h3>Hello world!
-      {% if not data.user %}
-        <a class="login-link" href="/login">Login</a>
-      {% endif %}
-    </h3>
+    <h3>Hello world!</h3>
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
 
     {{ apos.area(data.page, 'body', {
@@ -29,7 +32,7 @@
         }
       }
     }) }}
-    
+
   </div>
 
 {% endblock %}

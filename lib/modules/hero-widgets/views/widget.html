@@ -1,0 +1,15 @@
+{% set image = data.widget.backgroundImage.items[0]._pieces[0].item %}
+{% set bgImageURL = apos.attachments.url(image.attachment, { size: 'full' }) %}
+
+<div class="hero" style="background-image: url('{{ bgImageURL}}');">
+  <div class="hero-content">
+    <h1>{{ data.widget.title }}</h1>
+    <h3>{{ data.widget.description }}</h3>
+  </div>
+
+  <div class="hero-buttons">
+    {% for link in data.widget.links.items %}
+      <a class="button" href="{{ link._page.slug }}">{{ link.buttonText }}</a>
+    {% endfor %}
+  </div>
+</div>
