@@ -2,10 +2,10 @@
 
 {% block main %}
 
-{# ===== Singleton apos component ===== #}
-<h1>Singletons</h1>
-<div class="main-content">
-  {{
+  {# ===== Singleton apos component ===== #}
+  <h1>Singletons</h1>
+  <div class="main-content">
+    {{
     apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
       toolbar: ['Styles', 'Bold', 'Italic'],
       styles: [
@@ -14,10 +14,10 @@
       ]
     })
   }}
-</div>
+  </div>
 
-<div class="main-content">
-  {{
+  <div class="main-content">
+    {{
     apos.singleton(data.page, 'mainImage', 'single-image', {
       aspectRatio: [ 2, 1 ],
       limit: 1,
@@ -26,18 +26,18 @@
       size: 'full'
     })
   }}
-</div>
+  </div>
 
-<div class="main-content">
-  {{
+  <div class="main-content">
+    {{
     apos.singleton(data.page, 'resume', 'apostrophe-files', {
       limit: 1
     })
   }}
-</div>
+  </div>
 
-<div class="main-content">
-  {{
+  <div class="main-content">
+    {{
     apos.singleton(data.page, 'logo', 'apostrophe-images', {
       limit: 1,
       minSize: [ 1200, 600 ],
@@ -50,21 +50,30 @@
       }
     })
   }}
-</div>
+  </div>
 
-
-<div class="main-content">
-  {{
+  <div class="main-content">
+    {{
     apos.singleton(data.page, 'twoColumn', 'two-column')
   }}
-</div>
+  </div>
 
-<hr>
+  <div class="main-content">
+    {{
+    apos.singleton(data.page, 'drawers', {
+      widgets: {
+        drawer: {}
+      }
+    })
+  }}
+  </div>
 
-{# ===== Area apos component ===== #}
-<h1>Areas</h1>
-<div class="main-content">
-  {{
+  <hr>
+
+  {# ===== Area apos component ===== #}
+  <h1>Areas</h1>
+  <div class="main-content">
+    {{
     apos.area(data.page, 'body', {
       widgets: {
         'apostrophe-rich-text': { toolbar: [ 'Bold', 'Italic' ] },
@@ -72,16 +81,6 @@
       }
     })
   }}
-</div>
-
-<div class="main-content">
-  {{
-    apos.area(data.page, 'drawers', {
-      widgets: {
-        drawer: {}
-      }
-    })
-  }}
-</div>
+  </div>
 
 {% endblock %}
