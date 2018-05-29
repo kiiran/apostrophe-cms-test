@@ -1,9 +1,13 @@
 <ul>
-  {% for link in data.global.mainNav.items[0].links.items %}
+  {% for link in data.widget.links.items %}
     {% if link.type == 'page-link' %}
-      <li><a href="{{ link._page.slug }}">{{ link._page.title }}</a></li>
+      <li>
+        <a href="{{ link._page.slug }}">{{ link._page.title }}</a>
+      </li>
     {% else %}
-      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      <li>
+        <a href="{{ link.url }}">{{ link.label }}</a>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
