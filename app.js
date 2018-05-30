@@ -39,6 +39,7 @@ var apos = require('apostrophe')({
     'navbar-widgets': {},
     'drawer-widgets': {},
     'two-column-widgets': {},
+    'three-column-widgets': {},
     'single-image-widgets': {},
   },
 });

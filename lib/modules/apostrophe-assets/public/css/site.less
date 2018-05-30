@@ -30,13 +30,16 @@ a {
 
 a.button {
   border: 2px solid white;
-  border-radius: 35px;
+  border-radius: 50px;
   color: white;
   font-size: 130%;
   font-weight: bold;
   margin: 5px 10px;
-  padding: 15px 35px;
+  padding: 20px;
   text-decoration: none !important;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  max-width: 80vw;
 
   &:first-child,
   &:hover {
@@ -44,20 +47,23 @@ a.button {
   }
 }
 
-.two-column {
+.two-column,
+.three-column {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 
   > div {
     flex: 1;
+    margin: 10px;
 
     &:first-child {
-      margin-right: 5px;
+      margin-left: 0px;
     }
 
     &:last-child {
-      margin-left: 5px;
+      margin-right: 0px;
     }
   }
 }

@@ -1,0 +1,58 @@
+<div class="three-column">
+  <div class="column-left">
+    {{ apos.area(data.widget, 'areaLeft', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: ['Styles', 'Bold', 'Italic'],
+          styles: [
+            { name: 'Title', element: 'h3' },
+            { name: 'Meta', element: 'h5' }
+          ]
+        },
+        'single-image': {
+          limit: 1,
+          noHeight: true,
+          focalPoint: true
+        }
+      }
+    }) }}
+  </div>
+
+  <div class="column-middle">
+    {{ apos.area(data.widget, 'areaMiddle', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: ['Styles', 'Bold', 'Italic'],
+          styles: [
+            { name: 'Title', element: 'h3' },
+            { name: 'Meta', element: 'h5' }
+          ]
+        },
+        'single-image': {
+          limit: 1,
+          noHeight: true,
+          focalPoint: true
+        }
+      }
+    }) }}
+  </div>
+
+  <div class="column-right">
+    {{ apos.area(data.widget, 'areaRight', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: ['Styles', 'Bold', 'Italic'],
+          styles: [
+            { name: 'Title', element: 'h3' },
+            { name: 'Meta', element: 'h5' }
+          ]
+        },
+        'single-image': {
+          limit: 1,
+          noHeight: true,
+          focalPoint: true
+        }
+      }
+    }) }}
+  </div>
+</div>
