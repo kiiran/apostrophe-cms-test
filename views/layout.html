@@ -17,7 +17,7 @@
     This block outputs its contents in the HTML document's <head>.
     It is a good place to put extra <script> <link> and <meta> tags.
   #}
-  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Roboto" rel="stylesheet"> 
 {% endblock %}
 
 {% block beforeMain %}
@@ -54,8 +54,14 @@
   </div>
   <footer>
     {{
-      apos.singleton(data.global, 'footer', 'apostrophe-rich-text', {
-        toolbar: [ 'Bold', 'Italic', 'Styles', 'Link', 'Unlink' ]
+      apos.area(data.global, 'defaultFooter', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Bold', 'Italic', 'Styles', 'Link', 'Unlink' ]
+          },
+          'two-column': {},
+          'three-column': {}
+        }
       })
     }}
   </footer>

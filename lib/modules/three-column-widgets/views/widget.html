@@ -1,58 +1,63 @@
-<div class="three-column">
-  <div class="column-left">
-    {{ apos.area(data.widget, 'areaLeft', {
-      widgets: {
-        'apostrophe-rich-text': {
-          toolbar: ['Styles', 'Bold', 'Italic'],
-          styles: [
-            { name: 'Title', element: 'h3' },
-            { name: 'Meta', element: 'h5' }
-          ]
-        },
-        'single-image': {
-          limit: 1,
-          noHeight: true,
-          focalPoint: true
+<div class="content-container">
+  <div class="three-column">
+    <div class="column-left">
+      {{ apos.area(data.widget, 'areaLeft', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+            styles: [
+              { name: 'Heading', element: 'h3' },
+              { name: 'Subheading', element: 'h4' },
+              { name: 'Paragraph', element: 'p' }
+            ]
+          },
+          'single-image': {
+            limit: 1,
+            noHeight: true,
+            focalPoint: true
+          }
         }
-      }
-    }) }}
-  </div>
+      }) }}
+    </div>
 
-  <div class="column-middle">
-    {{ apos.area(data.widget, 'areaMiddle', {
-      widgets: {
-        'apostrophe-rich-text': {
-          toolbar: ['Styles', 'Bold', 'Italic'],
-          styles: [
-            { name: 'Title', element: 'h3' },
-            { name: 'Meta', element: 'h5' }
-          ]
-        },
-        'single-image': {
-          limit: 1,
-          noHeight: true,
-          focalPoint: true
+    <div class="column-middle">
+      {{ apos.area(data.widget, 'areaMiddle', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+            styles: [
+              { name: 'Heading', element: 'h3' },
+              { name: 'Subheading', element: 'h4' },
+              { name: 'Paragraph', element: 'p' }
+            ]
+          },
+          'single-image': {
+            limit: 1,
+            noHeight: true,
+            focalPoint: true
+          }
         }
-      }
-    }) }}
-  </div>
+      }) }}
+    </div>
 
-  <div class="column-right">
-    {{ apos.area(data.widget, 'areaRight', {
-      widgets: {
-        'apostrophe-rich-text': {
-          toolbar: ['Styles', 'Bold', 'Italic'],
-          styles: [
-            { name: 'Title', element: 'h3' },
-            { name: 'Meta', element: 'h5' }
-          ]
-        },
-        'single-image': {
-          limit: 1,
-          noHeight: true,
-          focalPoint: true
+    <div class="column-right">
+      {{ apos.area(data.widget, 'areaRight', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+            styles: [
+              { name: 'Heading', element: 'h3' },
+              { name: 'Subheading', element: 'h4' },
+              { name: 'Paragraph', element: 'p' }
+            ]
+          },
+          'single-image': {
+            limit: 1,
+            noHeight: true,
+            focalPoint: true
+          }
         }
-      }
-    }) }}
+      }) }}
+    </div>
   </div>
 </div>
