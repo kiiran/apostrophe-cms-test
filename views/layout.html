@@ -28,12 +28,31 @@
   <div id="site-wrapper">
     <div>
       <nav>
+      <div id="logo">
+        <a href="/">
+          {{
+            apos.singleton(data.global, 'navLogo', 'single-image', {
+              limit: 1,
+              minSize: [ 100, 100 ],
+              addLabel: 'Set the logo',
+              editLabel: 'Change the logo',
+              controls: {
+                movable: false,
+                removable: false,
+                position: 'bottom-right'
+              },
+              noHeight: true,
+              size: 'one-sixth'
+            })
+          }}
+        </a>
+      </div>
+
         {{
           apos.singleton(data.global, 'mainNav', 'navbar', {
             controls: {
               movable: false,
-              removable: false,
-              position: 'top-right'
+              removable: false
             }
           })
         }}

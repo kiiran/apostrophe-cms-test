@@ -4,7 +4,6 @@ body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -111,6 +110,17 @@ h1 {
   text-align: center;
   color: @apos-primary;
   margin: 40px 0 30px 0;
+}
+
+.image-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
 }
 
 @import 'components/footer.less';

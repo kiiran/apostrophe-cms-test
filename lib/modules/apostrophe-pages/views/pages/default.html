@@ -18,52 +18,52 @@
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'newMainImg', 'single-image', {
-      aspectRatio: [ 2, 1 ],
-      minSize: [ 700, 350 ],
-      size: 'full'
-    })
-  }}
+      apos.singleton(data.page, 'newMainImg', 'single-image', {
+        aspectRatio: [ 2, 1 ],
+        minSize: [ 700, 350 ],
+        size: 'full'
+      })
+    }}
   </div>
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'resume', 'apostrophe-files', {
-      limit: 1
-    })
-  }}
+      apos.singleton(data.page, 'resume', 'apostrophe-files', {
+        limit: 1
+      })
+    }}
   </div>
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'logo', 'apostrophe-images', {
-      limit: 1,
-      minSize: [ 1200, 600 ],
-      addLabel: 'Set the logo',
-      editLabel: 'Change the logo',
-      controls: {
-        movable: false,
-        removable: false,
-        position: 'bottom-right'
-      }
-    })
-  }}
+      apos.singleton(data.page, 'logo', 'apostrophe-images', {
+        limit: 1,
+        minSize: [ 1200, 600 ],
+        addLabel: 'Set the logo',
+        editLabel: 'Change the logo',
+        controls: {
+          movable: false,
+          removable: false,
+          position: 'bottom-right'
+        }
+      })
+    }}
   </div>
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'twoColumn', 'two-column')
-  }}
+      apos.singleton(data.page, 'twoColumn', 'two-column')
+    }}
   </div>
 
   <div class="main-content">
     {{
-    apos.singleton(data.page, 'drawers', {
-      widgets: {
-        drawer: {}
-      }
-    })
-  }}
+      apos.singleton(data.page, 'drawers', {
+        widgets: {
+          drawer: {}
+        }
+      })
+    }}
   </div>
 
   <hr>
@@ -72,13 +72,14 @@
   <h1>Areas</h1>
   <div class="main-content">
     {{
-    apos.area(data.page, 'body', {
-      widgets: {
-        'apostrophe-rich-text': { toolbar: [ 'Bold', 'Italic' ] },
-        'apostrophe-images': { size: 'full' }
-      }
-    })
-  }}
+      apos.area(data.page, 'body', {
+        widgets: {
+          'apostrophe-rich-text': { toolbar: [ 'Bold', 'Italic' ] },
+          'apostrophe-images': { size: 'full' },
+          'people': {}
+        }
+      })
+    }}
   </div>
 
 {% endblock %}

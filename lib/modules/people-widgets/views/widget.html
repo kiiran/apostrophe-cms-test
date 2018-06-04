@@ -1,0 +1,21 @@
+{% for piece in data.widget._pieces %}
+  <div style="width: 20vw; margin: 10px auto;">
+    <h4>
+      {% if piece._url %}<a href="{{ piece._url }}">{% endif %}
+        {{ piece.title }}
+        {% if piece._url %}</a>{% endif %}
+        {% if piece.phone %}
+        <a href="tel:{{ piece.phone }}">
+          {{ piece.phone }}
+        </a>
+        {% endif %}
+      </h4>
+      <script>console.log(JSON.stringify('{{piece | dump}}').replace(/&quot;/g, '"'))</script>
+      {{
+        apos.singleton(piece, 'thumbImg', 'single-image', {
+          edit: false,
+          size: 'one-sixth'
+        })
+      }}
+  </div>
+{% endfor %}

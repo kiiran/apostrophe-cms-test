@@ -41,5 +41,19 @@ var apos = require('apostrophe')({
     'two-column-widgets': {},
     'three-column-widgets': {},
     'single-image-widgets': {},
+    people: {},
+    'people-widgets': {
+      extend: 'apostrophe-pieces-widgets',
+      filters: {
+        projection: {
+          slug: 1,
+          title: 1,
+          type: 1,
+          tags: 1,
+          phone: 1,
+          thumbImg: 1,
+        },
+      },
+    },
   },
 });

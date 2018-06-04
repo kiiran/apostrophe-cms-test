@@ -1,7 +1,7 @@
-{% extends 'widgetBase.html' %}
-
-{%- block title -%}
-  {% if data.widget.showTitle %}
-    <h4>{{ image.title }}</h4>
-  {% endif %}
-{%- endblock -%}
+{%- for entry in data.widget._pieces -%}
+  {%- set image = entry.item or entry -%}
+  {%- set relationship = entry.relationship -%}
+  <div class="image-container">
+    <img src="{{ apos.attachments.url(image.attachment, { size: data.options.size, crop: relationship }) }}" />
+  </div>
+{%- endfor -%}
