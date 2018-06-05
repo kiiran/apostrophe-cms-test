@@ -38,6 +38,7 @@ var apos = require('apostrophe')({
     'page-link-widgets': {},
     'navbar-widgets': {},
     'drawer-widgets': {},
+    'one-column-widgets': {},
     'two-column-widgets': {},
     'three-column-widgets': {},
     'single-image-widgets': {},

@@ -1,0 +1,23 @@
+<div class="content-container">
+  <div class="one-column">
+    {{
+      apos.area(data.widget, 'mainArea', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+            styles: [
+              { name: 'Heading', element: 'h3' },
+              { name: 'Subheading', element: 'h4' },
+              { name: 'Paragraph', element: 'p' }
+            ]
+          },
+          'single-image': {
+            limit: 1,
+            noHeight: true,
+            focalPoint: true
+          }
+        }
+      })
+    }}
+  </div>
+</div>
