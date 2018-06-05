@@ -1,16 +1,10 @@
 nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: @bg-dark;
 
   #logo img {
     max-height: 70px;
@@ -20,11 +14,69 @@ nav {
     display: flex;
     justify-content: flex-end;
     min-width: 33vw;
+  }
 
-    a {
-      color: @apos-white;
-      font-weight: bold;
-      margin: 0 20px;
+  .nav-desktop a,
+  .nav-mobile a:not(.material-icons) {
+    color: white;
+    font-weight: bold;
+    margin: 0 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .nav-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: white;
+        cursor: pointer;
+
+        &.material-icons {
+          font-size: 35px;
+        }
+      }
+
+      & > ul {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        bottom: 0;
+        z-index: -10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+
+        opacity: 0;
+        background-color: @bg-dark;
+        text-align: center;
+        transition: all 0.3s ease-in;
+      }
+
+      &.open > ul {
+        right: 0px;
+        z-index: 10000;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+      }
+
+      li {
+        font-size: 120%;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .nav-mobile {
+      display: none;
     }
   }
 }

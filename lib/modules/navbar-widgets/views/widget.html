@@ -1,4 +1,13 @@
-<ul>
+<script>
+  function toggleMenu() {
+    var navMenu = document.querySelector('.nav-mobile');
+    if (navMenu) {
+      navMenu.classList.toggle('open');
+    }
+  }
+</script>
+
+<ul class="nav-desktop">
   {% for link in data.widget.links.items %}
     {% if link.type == 'page-link' %}
       <li>
@@ -11,3 +20,23 @@
     {% endif %}
   {% endfor %}
 </ul>
+
+<div class="nav-mobile">
+  <a id="open-nav-button" class="material-icons" onclick="toggleMenu()">menu</a>
+  <ul onclick="toggleMenu()">
+    <li>
+      <a id="close-nav-button" class="material-icons">close</a>
+    </li>
+    {% for link in data.widget.links.items %}
+      {% if link.type == 'page-link' %}
+        <li>
+          <a href="{{ link._page.slug }}">{{ link._page.title }}</a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{{ link.url }}">{{ link.label }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
