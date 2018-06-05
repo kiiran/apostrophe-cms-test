@@ -7,25 +7,28 @@
 
   > div {
     flex: 1;
-    margin: 0 20px;
   }
-}
 
-@media screen and (max-width: 767px) {
-  .two-column {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
 
-    > div {
+    & > div {
       width: 90vw;
       margin: 20px auto;
     }
   }
-}
 
-@media screen and (min-width: 768px) {
-  .two-column {
-    > div {
+  @media screen and (min-width: 768px) {
+    & > div {
+      margin: 0 25px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    & > div {
+      margin: 0 50px;
+
       &:first-child {
         margin-left: 0px;
       }
